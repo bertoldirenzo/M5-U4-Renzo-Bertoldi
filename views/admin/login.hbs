@@ -1,0 +1,27 @@
+<main>
+<h1>Hola soy login  </h1>
+<div class="contacto">
+            <form class="row g-3 p-3" action="/admin/login" method="post">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Usuario" aria-label="First name" id="inputUser" name="usuario">
+                </div>
+               
+                <div class="espacio"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <input type="password" class="form-control" placeholder="Contraseña" aria-label="Last name" id="inputPassword" name="password">
+                </div>
+
+                <div class="espacio"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <button type="submit" class="btn btn-success">Ingresar</button>
+                </div>
+            </form>
+            {{#if error}}
+            <p>Usuario o password incorrectos</p>
+            {{/if}}
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                crossorigin="anonymous">
+            </script>
+        </div>
+</main>
