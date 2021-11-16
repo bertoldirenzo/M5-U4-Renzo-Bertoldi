@@ -1,0 +1,32 @@
+<div class="container" style="margin: 30px auto">
+    <h4 style="text-align: center;">Modificar trabajo</h4>
+    {{trabajos.id}}
+    <form action="/admin/trabajos/modificar" method="post">
+    <input type="hidden" value="{{trabajos.id}}" name="id">
+    <div class="row mb-3">
+        <h6>Título</h6>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Titulo" name="titulo" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">{{trabajos.titulo}}</label>
+        </div>
+    </div>
+    <h6>Subtítulo</h6>
+    <div class="row mb-3">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Subtitulo" name="subtitulo"  id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">{{trabajos.subtitulo}}</label>
+        </div>
+    </div>
+    <h6>Cuerpo</h6>
+    <div class="row mb-3">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Cuerpo" name="cuerpo" id="floatingTextarea" style="height:200px"></textarea>
+            <label for="floatingTextarea">{{trabajos.cuerpo}}</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Modificar</button>
+    </form>
+     {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+</div>
