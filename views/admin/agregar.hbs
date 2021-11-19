@@ -1,6 +1,6 @@
 <div class="container" style="margin: 100px auto">
     <h4 style="text-align: center;">Agregar un nuevo trabajo</h4>
-    <form action="/admin/trabajos/agregar" method="post">
+    <form action="/admin/trabajos/agregar" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
         <div class="form-floating">
             <textarea class="form-control" placeholder="Titulo" name="titulo" id="floatingTextarea"></textarea>
@@ -17,6 +17,11 @@
         <div class="form-floating">
             <textarea class="form-control" placeholder="Cuerpo" name="cuerpo" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">Cuerpo</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="form-group">
+            <label>Imagen: <input type="file" name="imagen" id="imagen"/></label>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Guardar</button>
